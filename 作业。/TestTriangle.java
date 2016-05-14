@@ -1,11 +1,6 @@
-Enter file contents here
 package Mzy;
 import static org.junit.Assert.*;
-
 import org.junit.Test;
-
-
-
 
 
 public class TestTriangle {
@@ -13,36 +8,35 @@ public class TestTriangle {
     public void testIsTriangle1(){
         Triangle t = new Triangle(4,5,6);
         assertTrue(t.isTriangle(t));
+       
     }
 
     @Test
     public void testIsTriangle2(){
-        
         Triangle t = new Triangle(4,4,5);
-        assertTrue(t.isTriangle(t));
+        assertEquals("Isoceles",t.getType(t));
     }
 
     @Test
     public void testIsTriangle3(){
         Triangle t = new Triangle(4,5,5);
-        assertTrue(t.isTriangle(t));
+        assertEquals("Isoceles",t.getType(t));
     }
-   // 下面是添加你设计的测试用例
-   // *****
+   
     @Test
     public void testIsTriangle4(){
         Triangle t = new Triangle(4,5,4);
-        assertTrue(t.isTriangle(t));
+        assertEquals("Isoceles",t.getType(t));
     }
     @Test
     public void testIsTriangle5(){
         Triangle t = new Triangle(4,4,4);
-        assertTrue(t.isTriangle(t));
+        assertEquals("Regular",t.getType(t));
     }
     @Test
     public void testIsTriangle6(){
         Triangle t = new Triangle(3,4,5);
-        assertTrue(t.isTriangle(t));
+        assertEquals("Right",t.getType(t));
     }
     @Test
     public void testIsTriangle7(){
@@ -164,20 +158,6 @@ public class TestTriangle {
         Triangle t = new Triangle(7,5,2);
         assertTrue(t.isTriangle(t));
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
